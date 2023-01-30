@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+    function generatePassword() {
+        var length = 40,
+            charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            retVal = "",
+            count = 0;
+        for (var i = 0, n = charset.length; i < length; ++i) {
+            retVal += charset.charAt(Math.floor(Math.random() * n));
+            count++;
+            if (count % 4 == 0 && i != length - 1) {
+                retVal += "-";
+            }
+        }
+        document.getElementById("password").value = retVal;
+    }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Gerador de Senha</h1>
+      <div class="form-group">
+        <label for="password">Senha gerada</label>
+        <input type="text" class="form-control" id="password" readonly>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary" onclick="generatePassword()">Gerar Senha</button>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- 
+    exemplo da senha gerada ==> KPYD-WCRG-MJIQ-YSAM-TPPV-MFTO-XSOR-IYYU-LTOC-WTHF <== 
+-->
