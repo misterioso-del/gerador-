@@ -1,7 +1,7 @@
 # gerador-
 gerador de senhas em Bootstrap,
 
-#um gerador de senhas/ codigos feio em Bootstrap 
+#um gerador de senhas/ codigos feito em Bootstrap 
 
 
 COMO USAR?
